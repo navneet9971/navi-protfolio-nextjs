@@ -173,6 +173,7 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
+    companyName : "Eikomp",
     title: "Frontend Engineer Intern",
     desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
     className: "md:col-span-2",
@@ -180,6 +181,7 @@ export const workExperience = [
   },
   {
     id: 2,
+    companyName : "Eikomp",
     title: "Mobile App Dev - JSM Tech",
     desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
     className: "md:col-span-2", // change to md:col-span-2
@@ -187,6 +189,7 @@ export const workExperience = [
   },
   {
     id: 3,
+    companyName : "Eikomp",
     title: "Freelance App Dev Project",
     desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
     className: "md:col-span-2", // change to md:col-span-2
@@ -194,6 +197,7 @@ export const workExperience = [
   },
   {
     id: 4,
+    companyName : "Eikomp",
     title: "Lead Frontend Developer",
     desc: "Developed and maintained user-facing features using modern frontend technologies.",
     className: "md:col-span-2",
