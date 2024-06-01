@@ -205,7 +205,7 @@ export const workExperience = [
 export const socialMedia = [
   {
     id: 1,
-    img: "/git.svg",
+    img: "/git.svg"
   },
   {
     id: 2,
@@ -215,4 +215,52 @@ export const socialMedia = [
     id: 3,
     img: "/link.svg",
   },
+];
+
+export const skills =[
+  {
+    id:1,
+    img: "/skills/css.svg",
+    quote: "CSS",
+  },
+  {
+    id:2,
+    img: "/skills/html.svg",
+    quote: "HTML",
+  },
+  {
+    id:3,
+    img: "/skills/postman.svg",
+    quote: "Postman",
+  },
+  {
+    id:4,
+    img: "/skills/react.svg",
+    quote: "React.js",
+  },
+  {
+    id:5,
+    img: "/skills/nextjs.png",
+    quote: "Next.js",
+  },
+  {
+    id:6,
+    img: "/skills/tailwind.svg",
+    quote: "Tailwind",
+  },
+  {
+    id:7,
+    img: "/skills/javascript.svg",
+    quote: "JavaScript",
+  },
+  {
+    id:8,
+    img: "/skills/git.svg",
+    quote: "Git",
+  },
+  {
+    id:9,
+    img: "/skills/visual-studio-code.svg",
+    quote: "Visual Studio Code",
+  }
 ];
