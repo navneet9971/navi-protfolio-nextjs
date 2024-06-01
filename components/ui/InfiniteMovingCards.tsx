@@ -110,7 +110,6 @@ export const InfiniteMovingCards = ({
                         <img src={item.img} alt="profile"/>
 
                     </div>
-
                     {/* <div className="flex flex-col gap-1">
                     <span className=" text-xl leading-[1.6] text-white font-bold">
                     {item.name}
