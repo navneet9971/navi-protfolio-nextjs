@@ -25,9 +25,15 @@ const Experience = () => {
                 <img src={card.thumbnail} alt={card.thumbnail}
                 className='lg:w-32 md:w-20 w-16'/>
                 <div className='lg:ms-5'>
+
+                    <div className='flex items-center justify-between'>
                 <h1 className='text-start text-xl md:text-2xl font-bold'> 
                         {card.companyName}
                     </h1>
+                    <h2 className='text-start text-white-200 text-l md:text-xl font-semibold'>
+                        {card.date}
+                        </h2>
+                    </div>
                     <h1 className='text-start text-white-200 text-l md:text-xl font-semibold'> 
                         {card.title}
                     </h1>
