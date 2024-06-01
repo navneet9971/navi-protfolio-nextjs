@@ -8,7 +8,7 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
+    title: "Prioritizing client collaboration through transparent, open lines of communication",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
@@ -18,7 +18,7 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
+    title: "Effortlessly accommodate diverse time zones for effective collaboration",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -38,7 +38,7 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
+    title: "Passionate tech enthusiast dedicated to innovative development",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -70,37 +70,39 @@ export const gridItems = [
 ];
 
 export const projects = [
+
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    title: "Chrcha - Video Conferencing App",
+    des: "Simplify your video conferencing experience with Charcha. Seamlessly connect with colleagues and friends.",
+    img: "/p2.svg",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    link: "/https://char-cha.vercel.app/",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    title: "Youtube 2.O",
+    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
+    img: "/ytclone.png",
+    iconLists: ["/re.svg","/api.png"],
+    link: "https://you-tube-2-0-clone.vercel.app/",
   },
+ 
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
+    title: "React Portfolio",
     des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
+    img: "/reactportfolio.png",
+    iconLists: ["/re.svg", "/css.svg", "fm.svg"],
+    link: "/https://navi-portfolio.vercel.app/",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
+    title: "Learning Lens Admin Panel",
     des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "/ui.apple.com",
+    img: "/p4.png",
+    iconLists: ["/re.svg", "/css.svg"],
+    link: "https://learning-trails-desktop.vercel.app/",
   },
 ];
 

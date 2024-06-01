@@ -7,8 +7,8 @@ const RecentProjects = () => {
   return (
     <div className='py-20' id="project">
         <h1 className='heading'>
-            A small selection of { ' ' }
-            <span className='text-purple'>recent projects
+        Recent project showcase:{ ' ' }
+            <span className='text-purple'> innovation in action
             </span>
         </h1>
         <div 
