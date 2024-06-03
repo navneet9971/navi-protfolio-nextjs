@@ -13,11 +13,9 @@ const Approach = () => {
       <div className="my-20 flex flex-col lg:flex-row items-center 
       justify-center gap-4">
         <Card 
-        title="Planning & Strategy" 
-        icon={<AceternityIcon order= "Phase 1"  />}
-        description="We'll collaborate to map out your website's goals, target
-        audience, and key functionality. we'll discuss things like site sturucture,
-        navigation, and content requirements."
+        title="Learning Trails" 
+        icon={<AceternityIcon order= "Work 1"  />}
+        description="Built 3 (crm + user + kiosk) Interactive web app from scratch for the company to train their employees and workers on an international level."
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
