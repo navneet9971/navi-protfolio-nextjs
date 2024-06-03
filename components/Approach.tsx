@@ -24,7 +24,7 @@ const Approach = () => {
         </Card>
         <Card 
         title="Development & Progress Update" 
-        icon={<AceternityIcon order= "Phase 2"/>}
+        icon={<AceternityIcon order= "Work 2"/>}
         description="Once we agree on the plan, I cue my lofi playlist and dive into coding.
         From initial sketches to polished code, I keep you update every step of the way."
         >
