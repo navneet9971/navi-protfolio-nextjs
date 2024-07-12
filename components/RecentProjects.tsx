@@ -4,6 +4,11 @@ import { PinContainer } from './ui/3d-pin'
 import { FaLocationArrow } from 'react-icons/fa'
 
 const RecentProjects = () => {
+
+    const handleProject = (url: string) => {
+        window.open( url, "_blank")
+    }
+
   return (
     <div className='py-20' id="projects">
         <h1 className='heading'>
@@ -54,8 +59,12 @@ const RecentProjects = () => {
     </div>
 
     <div className='flex justify-center items-center'>
-        <p className='flex lg:text-xl md:text-xs text-sm text-purple'>
-            Check Live Site</p>
+    <p
+    className='flex lg:text-xl md:text-xs text-sm text-purple cursor-pointer'
+    // onClick={() => handleProject(link)}
+>
+    Check Live Site
+</p>
         <FaLocationArrow className='ms-3'
         color='#CBACF9' />
     </div>

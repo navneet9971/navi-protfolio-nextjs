@@ -1,15 +1,19 @@
 import { workExperience } from '@/data'
 import React from 'react'
 import { Button } from './ui/MovingBorders'
+import { FollowerPointerCard, TitleComponent } from './ui/FollowingPointer'
+
 
 const Experience = () => {
   return (
     <div className='py-20' id="experince">
+        
     <h1 className='heading'>
         My
         <span className='text-purple'> work experience
         </span>
     </h1>
+    
     <div 
     // className='w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10'
     className='w-full mt-12 flex flex-col items-center justify-center gap-6'>
@@ -44,8 +48,8 @@ const Experience = () => {
              </div>
             </Button>
         ))}
-
         </div>
+        
         </div>
   )
 }
