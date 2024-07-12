@@ -37,20 +37,20 @@ export const gridItems = [
     img: "",
     spareImg: "",
   },
-  {
-    id: 4,
-    title: "Passionate tech enthusiast dedicated to innovative development",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "/grid.svg",
-    spareImg: "/b4.svg",
-  },
+  // {
+  //   id: 4,
+  //   title: "Passionate tech enthusiast dedicated to innovative development",
+  //   description: "",
+  //   className: "lg:col-span-2 md:col-span-3 md:row-span-1",
+  //   imgClassName: "",
+  //   titleClassName: "justify-start",
+  //   img: "/grid.svg",
+  //   spareImg: "/b4.svg",
+  // },
 
   {
     id: 5,
-    title: "Currently Explore a new language",
+    title: "Exploring a new framework to broaden skills",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -81,30 +81,38 @@ export const projects = [
     link: "/https://char-cha.vercel.app/",
   },
   {
-    id: 2,
+    id:2,
+    title:"Money Tracker",
+    des: "Logging daily expenses to better understand your spending patterns.",
+    img: "/money.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/express.png", "/node.png", "/mongodb.svg"],
+    link: "https://money-tracker-adv.vercel.app/",
+  },
+  {
+    id: 3,
     title: "Youtube 2.O",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
+    des: "YouTube 2.0 is a React.js application that mimics YouTube's core functionalities. It utilizes a free API from RapidAPI to fetch and display video content.",
     img: "/ytclone.png",
     iconLists: ["/re.svg","/api.png"],
     link: "https://you-tube-2-0-clone.vercel.app/",
   },
  
   {
-    id: 3,
+    id: 4,
     title: "React Portfolio",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
+    des: "Create a modern portfolio using React.js to showcase your projects and skills effectively.",
     img: "/reactportfolio.png",
     iconLists: ["/re.svg", "/css.svg", "fm.svg"],
     link: "/https://navi-portfolio.vercel.app/",
   },
-  {
-    id: 4,
-    title: "Learning Lens Admin Panel",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.png",
-    iconLists: ["/re.svg", "/css.svg"],
-    link: "https://learning-trails-desktop.vercel.app/",
-  },
+  // {
+  //   id: 4,
+  //   title: "Learning Lens Admin Panel",
+  //   des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
+  //   img: "/p4.png",
+  //   iconLists: ["/re.svg", "/css.svg"],
+  //   link: "https://learning-trails-desktop.vercel.app/",
+  // },
 ];
 
 export const testimonials = [
@@ -206,15 +214,18 @@ export const workExperience = [
 export const socialMedia = [
   {
     id: 1,
-    img: "/git.svg"
+    img: "/git.svg",
+    url: "https://github.com/navneet9971"
   },
   {
     id: 2,
     img: "/twit.svg",
+    url: "https://x.com/navneetjha9971"
   },
   {
     id: 3,
     img: "/link.svg",
+    url: "https://www.linkedin.com/in/navneet-kumar-42b75b204/"
   },
 ];
 
