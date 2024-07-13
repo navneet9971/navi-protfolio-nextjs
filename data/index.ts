@@ -78,7 +78,10 @@ export const projects = [
     des: "Simplify your video conferencing experience with Charcha. Seamlessly connect with colleagues and friends.",
     img: "/p2.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/https://char-cha.vercel.app/",
+    live: "https://char-cha.vercel.app/",
+    github: "https://github.com/navneet9971",
+    perview: "Live Perview",
+    gitText: "Github",
   },
   {
     id:2,
@@ -86,7 +89,10 @@ export const projects = [
     des: "Logging daily expenses to better understand your spending patterns.",
     img: "/money.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/express.png", "/node.png", "/mongodb.svg"],
-    link: "https://money-tracker-adv.vercel.app/",
+    live: "https://money-tracker-adv.vercel.app/",
+    github: "https://github.com/navneet9971",
+    perview: "Live Perview",
+    gitText: "Github",
   },
   {
     id: 3,
@@ -94,7 +100,10 @@ export const projects = [
     des: "YouTube 2.0 is a React.js application that mimics YouTube's core functionalities. It utilizes a free API from RapidAPI to fetch and display video content.",
     img: "/ytclone.png",
     iconLists: ["/re.svg","/api.png"],
-    link: "https://you-tube-2-0-clone.vercel.app/",
+    live: "https://you-tube-2-0-clone.vercel.app/",
+    github: "https://github.com/navneet9971",
+    perview: "Live Perview",
+    gitText: "Github",
   },
  
   {
@@ -103,7 +112,10 @@ export const projects = [
     des: "Create a modern portfolio using React.js to showcase your projects and skills effectively.",
     img: "/reactportfolio.png",
     iconLists: ["/re.svg", "/css.svg", "fm.svg"],
-    link: "/https://navi-portfolio.vercel.app/",
+    live: "/https://navi-portfolio.vercel.app/",
+    github: "https://github.com/navneet9971",
+    perview: "Live Perview",
+    gitText: "Github",
   },
   // {
   //   id: 4,
