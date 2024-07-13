@@ -112,7 +112,7 @@ export const projects = [
     des: "Create a modern portfolio using React.js to showcase your projects and skills effectively.",
     img: "/reactportfolio.png",
     iconLists: ["/re.svg", "/css.svg", "fm.svg"],
-    live: "/https://navi-portfolio.vercel.app/",
+    live: "https://navi-portfolio.vercel.app/",
     github: "https://github.com/navneet9971/navneet-portfolio-react.git",
     perview: "Live Perview",
     gitText: "Github",
