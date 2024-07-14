@@ -1,8 +1,6 @@
 import { workExperience } from '@/data'
 import React from 'react'
 import { Button } from './ui/MovingBorders'
-import { FollowerPointerCard, TitleComponent } from './ui/FollowingPointer'
-
 
 const Experience = () => {
   return (
