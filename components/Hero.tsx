@@ -5,10 +5,10 @@ import MagicButton from './ui/MagicButton'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import { FaDownload } from 'react-icons/fa6'
-import xlogo from "../public/xlogo.png";
-import github from "../public/gitmove.png";
-import linkdin from "../public/inkdin.png";
-import FloatingIcons from './ui/FlotingIcons'
+// import xlogo from "../public/xlogo.png";
+// import github from "../public/gitmove.png";
+// import linkdin from "../public/inkdin.png";
+// import FloatingIcons from './ui/FlotingIcons'
 
 const Hero = () => {
 
