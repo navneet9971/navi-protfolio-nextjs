@@ -76,10 +76,10 @@ const Hero = () => {
     </p>
     <FloatingIcons>
       <img id="x" src={xlogo.src} width={40} height={40} className="cursor-pointer" alt="Developer logo" />
-     
-    </FloatingIcons>
-    <img id="git" src={github.src} width={26} height={26} className="cursor-pointer" alt="Developer logo" />
+      <img id="git" src={github.src} width={26} height={26} className="cursor-pointer" alt="Developer logo" />
       <img id="linkdin" src={linkdin.src} width={27} height={27} className="cursor-pointer" alt="Developer logo" />
+    </FloatingIcons>
+    
 
 <div className='flex items-center justify-center gap-10'>
             <a href='#project'>
