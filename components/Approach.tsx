@@ -23,10 +23,9 @@ const Approach = () => {
           />
         </Card>
         <Card 
-        title="Neurobridge" 
+        title="Aicansell" 
         icon={<AceternityIcon order= "Work 2"/>}
-        description="Once we agree on the plan, I cue my lofi playlist and dive into coding.
-        From initial sketches to polished code, I keep you update every step of the way."
+        description="I developed a CRM user panel for Aicansell, enhancing customer management and sales processes with features like secure authentication, a customizable dashboard, customer profile management, and a visual sales pipeline. This streamlined customer interactions and improved sales efficiency."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -39,10 +38,9 @@ const Approach = () => {
           />
         </Card>
         <Card 
-        title="Development & Launch" 
+        title="NeuroBridge" 
         icon={<AceternityIcon order= "Work 3" />}
-        description="This is where the magic happens! Based on the approved design,
-         I'll translate everything into functional code, building your website from the ground up."
+        description="NeuroBridge is a 4-page web application for a company, featuring a mix of static and dynamic content. The static pages include a home page, about page, and services page. The dynamic page uses an API provided by the company to display real-time data. This combination ensures a seamless and informative user experience."
         >
           <CanvasRevealEffect
             animationSpeed={3}
