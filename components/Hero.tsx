@@ -5,6 +5,10 @@ import MagicButton from './ui/MagicButton'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import { FaDownload } from 'react-icons/fa6'
+import xlogo from "../public/xlogo.png";
+import github from "../public/gitmove.png";
+import linkdin from "../public/inkdin.png";
+import FloatingIcons from './ui/FlotingIcons'
 
 const Hero = () => {
 
@@ -50,6 +54,7 @@ const Hero = () => {
       [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
     </div>
 
+
     <div className='flex justify-center relative my-20
     z-10'>
         <div className='max-w-[89vw] md:max-w-2xl
@@ -66,14 +71,18 @@ const Hero = () => {
             words='Transforming Concepts into Seamless User Experiences'
             />
 
-            <p className='text-center md:tracking-wider mb-4 text-sm
-            md:text-lg lg:text-2xl'>
-               Hello, I&apos;m Navneet, a Frontend Developer 
-               based in Delhi
-            </p>
+<p className="flex items-center justify-center text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+    Hello, I&apos;m Navneet
+    <FloatingIcons>
+      <img id="x" src={xlogo.src} width={40} height={40} className="cursor-pointer" alt="Developer logo" />
+      <img id="git" src={github.src} width={26} height={26} className="cursor-pointer" alt="Developer logo" />
+      <img id="linkdin" src={linkdin.src} width={27} height={27} className="cursor-pointer" alt="Developer logo" />
+    </FloatingIcons>
+    , a Frontend Developer based in Delhi
+  </p>
 
 <div className='flex items-center justify-center gap-10'>
-            <a href='#about'>
+            <a href='#project'>
                 <MagicButton
                 title= "Show my work"
                 icon= {<FaLocationArrow />}
