@@ -74,11 +74,11 @@ const Hero = () => {
 <p className="flex items-center justify-center text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
     Hello, I&apos;m Navneet, a Frontend Developer based in Delhi
     </p>
-    <FloatingIcons>
+    {/* <FloatingIcons>
       <img id="x" src={xlogo.src} width={40} height={40} className="cursor-pointer" alt="Developer logo" />
       <img id="git" src={github.src} width={26} height={26} className="cursor-pointer" alt="Developer logo" />
       <img id="linkdin" src={linkdin.src} width={27} height={27} className="cursor-pointer" alt="Developer logo" />
-    </FloatingIcons>
+    </FloatingIcons> */}
     
 
 <div className='flex items-center justify-center gap-10'>
