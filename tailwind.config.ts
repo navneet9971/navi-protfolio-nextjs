@@ -90,6 +90,9 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        blink: {
+          '100%': { transform: 'scale(2, 2)', opacity: '0' },
+        },
         spotlight: {
           "0%": {
             opacity: "0",
@@ -150,6 +153,7 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        blink: 'blink 1s linear infinite',
         spotlight: "spotlight 2s ease .75s 1 forwards",
         shimmer: "shimmer 2s linear infinite",
         first: "moveVertical 30s ease infinite",
