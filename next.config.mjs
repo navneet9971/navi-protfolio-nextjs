@@ -1,6 +1,16 @@
 import {withSentryConfig} from '@sentry/nextjs';
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+
+
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    images: {
+      domains: [
+        "api.microlink.io", // Microlink Image Preview
+      ],
+    },
+  };
 
 export default withSentryConfig(nextConfig, {
 // For all available options, see:
