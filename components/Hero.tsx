@@ -75,12 +75,12 @@ const Hero = () => {
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hello, I&apos;m
             <LinkPreview url='https://x.com/Navi9971'>
-              <span className='ml-2 text-purple font-bold'> Navneet Kumar,</span>
+              <span className='ml-2 text-purple font-bold sm:ml-1'> Navneet Kumar,</span>
             </LinkPreview>
             a Frontend Developer based in
 
             <LinkPreview url={image.delhi}>
-              <span className='ml-2 text-purple font-bold'>Delhi</span>
+              <span className='ml-2 text-purple font-bold sm:ml-1'>Delhi</span>
             </LinkPreview>
           </p>
           {/* <FloatingIcons>
