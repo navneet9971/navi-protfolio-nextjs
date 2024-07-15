@@ -4,7 +4,7 @@ import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { FaLocationArrow } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
-import use from "@/public/bg.png";
+// import use from "@/public/bg.png";
 
 const RecentProjects = () => {
   return (
