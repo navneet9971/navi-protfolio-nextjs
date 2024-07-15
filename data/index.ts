@@ -232,7 +232,7 @@ export const socialMedia = [
   {
     id: 2,
     img: "/twit.svg",
-    url: "https://x.com/navneetjha9971"
+    url: "https://x.com/Navi9971"
   },
   {
     id: 3,
@@ -288,3 +288,8 @@ export const skills =[
     quote: "Visual Studio Code",
   }
 ];
+
+export const image =
+  {
+    delhi: "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQ5BPjweWM0hyUPHWb8QJtHYmj6T-ZHFXRcTcGxl_CcpZwc179fXPWprnYGS8B8fJ9f45Tn3ygk5gzrtEeRsIRCxGuUQMt5xBbtHcrP-dQ"
+  }

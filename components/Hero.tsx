@@ -5,6 +5,8 @@ import MagicButton from './ui/MagicButton'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import { FaDownload } from 'react-icons/fa6'
+import { LinkPreview } from './ui/LinkPerview'
+import { image } from '@/data'
 // import xlogo from "../public/xlogo.png";
 // import github from "../public/gitmove.png";
 // import linkdin from "../public/inkdin.png";
@@ -72,7 +74,15 @@ const Hero = () => {
             />
 
 <p className="flex items-center justify-center text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-    Hello, I&apos;m Navneet, a Frontend Developer based in Delhi
+    Hello, I&apos;m 
+     <LinkPreview url='https://x.com/Navi9971'>
+      <span className='ml-2 text-purple font-bold'> Navneet Kumar,</span>
+    </LinkPreview>
+     a Frontend Developer based in 
+     
+     <LinkPreview url={image.delhi}>
+     <span className='ml-2 text-purple font-bold'>Delhi</span>
+     </LinkPreview>
     </p>
     {/* <FloatingIcons>
       <img id="x" src={xlogo.src} width={40} height={40} className="cursor-pointer" alt="Developer logo" />
