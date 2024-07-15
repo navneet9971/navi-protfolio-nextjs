@@ -4,11 +4,9 @@ import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { FaLocationArrow } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
-// import use from "@/public/bg.png";
 
 const RecentProjects = () => {
   return (
-
     <div className='py-20' id="projects">
       <h1 className='heading'>
         Recent project showcase:{' '}
@@ -18,13 +16,10 @@ const RecentProjects = () => {
       <div
         className='flex flex-wrap items-center 
         justify-center p-4 gap-x-24 gap-y-8 mt-10' >
-
         {projects.map(({ id, title, des, img, iconLists, live, github, perview, gitText }) => (
-          <CardContainer className="inter-var">
-
+          <CardContainer className="inter-var" key={id}>
             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
-
-              <div key={id}>
+              <div>
                 <CardItem
                   translateZ="50"
                   className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -53,9 +48,7 @@ const RecentProjects = () => {
                   />
                 </CardItem>
 
-
                 <div className="flex items-center justify-between mt-7 mb-3">
-
                   <CardItem
                     translateZ={20}
                     translateX={-40}
@@ -67,13 +60,13 @@ const RecentProjects = () => {
                         className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center'
                         style={{ transform: `translateX(-${5 * index * 2}px)` }}
                       >
-                        <Image src={icon} alt={icon} className='p-2' />
+                        <Image   height="1000"
+                    width="1000" src={icon} alt={icon} className='p-2' />
                       </div>
                     ))}
-
                   </CardItem>
 
-                  <div className='flex flex-row gap-5  justify-center items-center'>
+                  <div className='flex flex-row gap-5 justify-center items-center'>
                     <CardItem
                       translateZ={20}
                       translateX={40}
@@ -81,25 +74,20 @@ const RecentProjects = () => {
                       <Link href={live} target="_blank" rel="noopener noreferrer" className="hover-red-600">
                         {perview}
                       </Link>
-
                     </CardItem>
 
                     <CardItem
                       translateZ={20}
                       translateX={40}
                     >
-                      <Link href={github as string} target="_blank" rel="noopener noreferrer" className="hover-red-600">
+                      <Link href={github} target="_blank" rel="noopener noreferrer" className="hover-red-600">
                         {gitText}
                       </Link>
-
                     </CardItem>
-
                   </div>
                 </div>
               </div>
-
             </CardBody>
-
           </CardContainer>
         ))}
       </div>
