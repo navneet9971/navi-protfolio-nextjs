@@ -72,7 +72,6 @@ const Hero = () => {
             lg:text-6xl'
             words='Transforming Concepts into Seamless User Experiences'
             />
-
 <p className="flex items-center justify-center text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
     Hello, I&apos;m 
      <LinkPreview url='https://x.com/Navi9971'>
