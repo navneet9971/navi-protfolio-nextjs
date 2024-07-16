@@ -244,50 +244,76 @@ export const socialMedia = [
 export const skills =[
   {
     id:1,
-    img: "/skills/css.svg",
-    quote: "CSS",
+    image: "/skills/css.svg",
+    name: "CSS",
+    designation:""
   },
   {
     id:2,
-    img: "/skills/html.svg",
-    quote: "HTML",
+    image: "/skills/html.svg",
+    name: "HTML",
+    designation:""
   },
   {
     id:3,
-    img: "/skills/postman.svg",
-    quote: "Postman",
+    image: "/skills/postman.svg",
+    name: "Postman",
+    designation:""
   },
   {
     id:4,
-    img: "/skills/react.svg",
-    quote: "React.js",
+    image: "/skills/react.svg",
+    name: "React.js",
+    designation:""
   },
   {
     id:5,
-    img: "/skills/nextjs.png",
-    quote: "Next.js",
+    image: "/skills/nextjs.png",
+    name: "Next.js",
+    designation:""
   },
   {
     id:6,
-    img: "/skills/tailwind.svg",
-    quote: "Tailwind",
+    image: "/skills/tailwind.svg",
+    name: "Tailwind",
+    designation:""
   },
   {
     id:7,
-    img: "/skills/javascript.svg",
-    quote: "JavaScript",
+    image: "/skills/javascript.svg",
+    name: "JavaScript",
+    designation:""
   },
   {
     id:8,
-    img: "/skills/git.svg",
-    quote: "Git",
+    image: "/skills/git.svg",
+    name: "Git",
+    designation:""
   },
   {
     id:9,
-    img: "/skills/visual-studio-code.svg",
-    quote: "Visual Studio Code",
+    image: "/skills/visual-studio-code.svg",
+    name: "Visual Studio Code",
+    designation:""
   }
 ];
+
+export const icons =[
+  "typescript",
+  "javascript",
+  "react",
+  "html5",
+  "css3",
+  "nextdotjs",
+  "amazonaws",
+  "firebase",
+  "vercel",
+  "testinglibrary",
+  "git",
+  "github",
+  "visualstudiocode",
+  "figma",
+]
 
 export const image =
   {

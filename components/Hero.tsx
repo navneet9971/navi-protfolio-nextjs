@@ -7,15 +7,19 @@ import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import { FaDownload } from 'react-icons/fa6'
 import { LinkPreview } from './ui/LinkPerview'
 import { image } from '@/data'
-// import xlogo from "../public/xlogo.png";
-// import github from "../public/gitmove.png";
-// import linkdin from "../public/inkdin.png";
-// import FloatingIcons from './ui/FlotingIcons'
+import { toast, ToastContainer } from 'react-toastify'
+import xlogo from "../public/xlogo.png";
+import github from "../public/gitmove.png";
+import linkdin from "../public/inkdin.png";
+import FloatingIcons from './ui/FlotingIcons'
 
 const Hero = () => {
 
   const handleResume = () => {
     try {
+      // Show loader toast
+      const loaderToast = toast.loading("Downloading...");
+
       const link = document.createElement('a');
       link.href = "https://drive.google.com/uc?export=download&id=14TjMwXeawmbIJl0fumhbVYy5jN1KBIjt";
       link.setAttribute('download', 'Navneet Resume.pdf');
@@ -23,12 +27,23 @@ const Hero = () => {
       link.click();
       document.body.removeChild(link);
 
-      // After a 1-second delay, view the resume
+      // Mark the loader toast as done after a small delay
       setTimeout(() => {
-        window.open("https://drive.google.com/file/d/14TjMwXeawmbIJl0fumhbVYy5jN1KBIjt/view?usp=sharing", "_blank");
+        toast.update(loaderToast, {
+          render: "Download done",
+          type: "success",
+          isLoading: false,
+          autoClose: 5000
+        });
+
+        // After a 1-second delay, view the resume
+        setTimeout(() => {
+          window.open("https://drive.google.com/file/d/14TjMwXeawmbIJl0fumhbVYy5jN1KBIjt/view?usp=sharing", "_blank");
+        }, 1000);
       }, 1000);
     } catch (err) {
       console.error(err);
+      toast.error("An error occurred while downloading the resume");
     }
   };
 
@@ -66,7 +81,6 @@ const Hero = () => {
             text-xs text-center text-blue-100 max-w-80'>
                 Dynamic Web Magic with Next.js
             </h2> */}
-
           <TextGenerateEffect
             className='text-center text-[40px] md:text-5xl
             lg:text-6xl'
