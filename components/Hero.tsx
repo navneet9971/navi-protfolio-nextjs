@@ -104,7 +104,7 @@ const Hero = () => {
       <img id="git" src={github.src} width={26} height={26} className="cursor-pointer" alt="Developer logo" />
       <img id="linkdin" src={linkdin.src} width={27} height={27} className="cursor-pointer" alt="Developer logo" />
     </FloatingIcons> */}
-          <span className="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">
+          <span className="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300 mb-5 lg:mb-0">
             <div className="inline-block w-3 h-3 mr-2 bg-green-500 rounded-full relative">
 
               <span className=" block w-3 h-3 me-1 bg-green-500 opacity-70 rounded-full animate-blink"></span>
