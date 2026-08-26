@@ -1,98 +1,137 @@
-import { projects } from '@/data';
-import React from 'react';
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
-import { FaLocationArrow } from 'react-icons/fa';
-import Link from 'next/link';
-import Image from 'next/image';
+"use client";
+
+import SectionHeader from "@/components/ui/SectionHeader";
+import { projects } from "@/data";
+import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { FaArrowRight } from "react-icons/fa";
 
 const RecentProjects = () => {
+  const [active, setActive] = useState(0);
+  const current = projects[active];
+
   return (
-    <div className='py-20' id="projects">
-      <h1 className='heading'>
-        Recent project showcase:{' '}
-        <span className='text-purple'> innovation in action
-        </span>
-      </h1>
-      <div
-        className='flex flex-wrap items-center 
-        justify-center p-4 gap-x-24 gap-y-8 mt-10' >
-        {projects.map(({ id, title, des, img, iconLists, live, github, perview, gitText }) => (
-          <CardContainer className="inter-var" key={id}>
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
-              <div>
-                <CardItem
-                  translateZ="50"
-                  className="text-xl font-bold text-neutral-600 dark:text-white"
+    <section id="projects" className="scroll-mt-24 py-24 md:py-32">
+      <div className="section-shell">
+        <SectionHeader
+          index="02"
+          kicker="Selected work"
+          title="Projects that move."
+          copy="Hover a title to preview. Store links, live builds, and internal tools live here."
+        />
+
+        <div className="grid items-stretch gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="flex max-h-[540px] flex-col overflow-y-auto border-t border-cream/10 pr-2">
+            {projects.map((project, index) => {
+              const isActive = index === active;
+              return (
+                <button
+                  key={project.id}
+                  type="button"
+                  onMouseEnter={() => setActive(index)}
+                  onFocus={() => setActive(index)}
+                  onClick={() => setActive(index)}
+                  className={`group flex w-full items-start justify-between gap-4 border-b border-cream/10 py-5 text-left transition ${
+                    isActive ? "text-cream" : "text-mute hover:text-cream"
+                  }`}
                 >
-                  {title}
-                </CardItem>
-                <CardItem
-                  as="p"
-                  translateZ="60"
-                  className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
-                >
-                  {des}
-                </CardItem>
-                <CardItem
-                  translateZ="100"
-                  rotateX={20}
-                  rotateZ={-5}
-                  className="w-full mt-4"
-                >
-                  <Image
-                    src={img}
-                    height="1000"
-                    width="1000"
-                    className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                    alt="thumbnail"
+                  <span className="font-mono text-xs text-lime">
+                    {String(project.id).padStart(2, "0")}
+                  </span>
+                  <span className="flex-1">
+                    <span className="block font-display text-xl font-semibold md:text-2xl">
+                      {project.title}
+                    </span>
+                    <span
+                      className={`mt-2 block max-w-md text-sm leading-relaxed text-mute transition ${
+                        isActive
+                          ? "opacity-100"
+                          : "opacity-0 lg:h-0 lg:overflow-hidden"
+                      }`}
+                    >
+                      {project.des}
+                    </span>
+                  </span>
+                  <FaArrowRight
+                    className={`mt-2 shrink-0 transition ${
+                      isActive ? "translate-x-1 text-lime" : "opacity-0"
+                    }`}
                   />
-                </CardItem>
+                </button>
+              );
+            })}
+          </div>
 
-                <div className="flex items-center justify-between mt-7 mb-3">
-                  <CardItem
-                    translateZ={20}
-                    translateX={-40}
-                    className='flex items-center'
-                  >
-                    {iconLists.map((icon, index) => (
-                      <div
-                        key={index}
-                        className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center'
-                        style={{ transform: `translateX(-${5 * index * 2}px)` }}
-                      >
-                        <Image   height="1000"
-                    width="1000" src={icon} alt={icon} className='p-2' />
-                      </div>
-                    ))}
-                  </CardItem>
-
-                  <div className='flex flex-row gap-5 justify-center items-center'>
-                    <CardItem
-                      translateZ={20}
-                      translateX={40}
-                    >
-                      <Link href={live} target="_blank" rel="noopener noreferrer" className="hover-red-600">
-                        {perview}
-                      </Link>
-                    </CardItem>
-
-                    <CardItem
-                      translateZ={20}
-                      translateX={40}
-                    >
-                      <Link href={github} target="_blank" rel="noopener noreferrer" className="hover-red-600">
-                        {gitText}
-                      </Link>
-                    </CardItem>
+          <div className="relative min-h-[320px] overflow-hidden rounded-2xl border border-cream/10 bg-panel lg:min-h-[540px]">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={current.id}
+                initial={{ opacity: 0, scale: 1.04 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.98 }}
+                transition={{ duration: 0.35 }}
+                className="absolute inset-0"
+              >
+                {current.img ? (
+                  <Image
+                    src={current.img}
+                    alt={current.title}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(214,255,75,0.18),transparent_42%),linear-gradient(180deg,#141413,#0a0a09)]" />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/35 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 flex flex-col gap-4 p-6">
+                  <div>
+                    <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-lime">
+                      {current.status}
+                    </p>
+                    <h3 className="mt-2 font-display text-2xl font-semibold text-cream md:text-3xl">
+                      {current.title}
+                    </h3>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {current.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full border border-cream/15 bg-ink/60 px-3 py-1 text-xs text-cream backdrop-blur"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
+                  {current.links.length > 0 && (
+                    <div className="flex flex-wrap gap-3">
+                      {current.links.map((link, index) => (
+                        <Link
+                          key={link.url}
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium ${
+                            index === 0
+                              ? "bg-lime text-ink"
+                              : "border border-cream/20 bg-ink/70 text-cream backdrop-blur"
+                          }`}
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </div>
-              </div>
-            </CardBody>
-          </CardContainer>
-        ))}
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
 
 export default RecentProjects;

@@ -1,10 +1,12 @@
 export const navItems = [
   { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
-  { name: "Experince", link: "#experince" },
+  { name: "Work", link: "#projects" },
+  { name: "Experience", link: "#experience" },
   { name: "Skills", link: "#myskills" },
   { name: "Contact", link: "#contact" },
 ];
+
+export const email = "Navneetjha2012@gmail.com";
 
 export const gridItems = [
   {
@@ -71,60 +73,87 @@ export const gridItems = [
 ];
 
 export const projects = [
-
   {
     id: 1,
-    title: "Chrcha - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Charcha. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    live: "https://char-cha.vercel.app/",
-    github: "https://github.com/navneet9971/zoom-clone-fullstack.git",
-    perview: "Live Perview",
-    gitText: "Github",
+    title: "Recytronics Waste Pickup",
+    des: "React Native pickup app live on Google Play and the App Store. Users schedule doorstep collection, scan waste with Gemini and Hugging Face for an estimated recycling value, and book from their location. Backend on Node.js and MongoDB.",
+    img: "",
+    tags: ["React Native", "Gemini AI", "Hugging Face", "Node.js", "MongoDB"],
+    links: [
+      {
+        label: "Play Store",
+        url: "https://play.google.com/store/apps/details?id=com.recytronics.pickup.app&pcampaignid=web_share",
+      },
+      {
+        label: "App Store",
+        url: "https://apps.apple.com/in/app/recytronicspickup/id6764770150",
+      },
+    ],
+    status: "Live on iOS & Android",
   },
   {
-    id:2,
-    title:"Money Tracker",
-    des: "Logging daily expenses to better understand your spending patterns.",
-    img: "/money.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/express.png", "/node.png", "/mongodb.svg"],
-    live: "https://money-tracker-adv.vercel.app/",
-    github: "https://github.com/navneet9971/money-tracker-adv.git",
-    perview: "Live Perview",
-    gitText: "Github",
+    id: 2,
+    title: "Google Maps Lead Intel",
+    des: "Pulls business data from Google Maps through Apify. When a listing has a website, Hugging Face extracts emails and phone numbers so outreach lists are ready without manual scraping.",
+    img: "",
+    tags: ["Apify", "Google Maps", "Hugging Face", "Node.js"],
+    links: [],
+    status: "Internal tooling",
   },
   {
     id: 3,
-    title: "Youtube 2.O",
-    des: "YouTube 2.0 is a React.js application that mimics YouTube's core functionalities. It utilizes a free API from RapidAPI to fetch and display video content.",
-    img: "/ytclone.png",
-    iconLists: ["/re.svg","/api.png"],
-    live: "https://you-tube-2-0-clone.vercel.app/",
-    github: "https://github.com/navneet9971/You-Tube-2.0.git",
-    perview: "Live Perview",
-    gitText: "Github",
+    title: "CINOVRA",
+    des: "Movie and series companion currently in Play Store testing. Search titles, check ratings, add your own score, and keep a watchlist plus a watched list. Categories like timepass and worth watching help you pick what to play next.",
+    img: "",
+    tags: ["React Native", "Node.js", "MongoDB", "Ratings"],
+    links: [],
+    status: "Play Store testing",
   },
- 
   {
     id: 4,
-    title: "React Portfolio",
-    des: "Create a modern portfolio using React.js to showcase your projects and skills effectively.",
-    img: "/reactportfolio.png",
-    iconLists: ["/re.svg", "/css.svg", "fm.svg"],
-    live: "https://navi-portfolio.vercel.app/",
-    github: "https://github.com/navneet9971/navneet-portfolio-react.git",
-    perview: "Live Perview",
-    gitText: "Github",
+    title: "Recytronics Internal CRM",
+    des: "Internal ops CRM for Recytronics: mark attendance, upload sales data, log pickup-schedule details, and keep field activity in one place for the team.",
+    img: "",
+    tags: ["Next.js", "Node.js", "MongoDB", "CRM"],
+    links: [],
+    status: "Internal product",
   },
-  // {
-  //   id: 4,
-  //   title: "Learning Lens Admin Panel",
-  //   des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-  //   img: "/p4.png",
-  //   iconLists: ["/re.svg", "/css.svg"],
-  //   link: "https://learning-trails-desktop.vercel.app/",
-  // },
+  {
+    id: 5,
+    title: "Chrcha - Video Conferencing App",
+    des: "Simplify your video conferencing experience with Charcha. Seamlessly connect with colleagues and friends.",
+    img: "/p2.svg",
+    tags: ["Next.js", "Tailwind", "TypeScript", "Stream"],
+    links: [
+      { label: "Live Preview", url: "https://char-cha.vercel.app/" },
+      { label: "GitHub", url: "https://github.com/navneet9971/zoom-clone-fullstack.git" },
+    ],
+    status: "Live",
+  },
+  {
+    id: 6,
+    title: "Money Tracker",
+    des: "Logging daily expenses to better understand your spending patterns.",
+    img: "/money.png",
+    tags: ["Next.js", "Express", "Node.js", "MongoDB"],
+    links: [
+      { label: "Live Preview", url: "https://money-tracker-adv.vercel.app/" },
+      { label: "GitHub", url: "https://github.com/navneet9971/money-tracker-adv.git" },
+    ],
+    status: "Live",
+  },
+  {
+    id: 7,
+    title: "Youtube 2.0",
+    des: "YouTube 2.0 is a React.js application that mimics YouTube's core functionalities. It utilizes a free API from RapidAPI to fetch and display video content.",
+    img: "/ytclone.png",
+    tags: ["React.js", "RapidAPI"],
+    links: [
+      { label: "Live Preview", url: "https://you-tube-2-0-clone.vercel.app/" },
+      { label: "GitHub", url: "https://github.com/navneet9971/You-Tube-2.0.git" },
+    ],
+    status: "Live",
+  },
 ];
 
 export const testimonials = [
@@ -196,30 +225,47 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    companyName : "AiCansell Pvt. Ltd.",
-    date : "April-2023 - Present",
-    title: " Software Developer",
-    desc: " At AiCansell, I developed a product featuring two panels: User and Admin, also managed another projects at Learning Lens.This platform focused on training workers and employees, offering CRM, Users, and Kiosk web applications.Working alongside a team of two, we ensured the smooth functioning of the application, which is utilized internationally.The project involved intricate problem-solving, particularly in resolving data-related issues from the backend to optimize site performance.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp2.svg",
+    companyName: "Recytronics Waste Solutions LLP",
+    date: "Dec 2025 — Present",
+    title: "Software Developer",
+    desc: "Building digital products for an authorised e-waste recycling company. Work spans pickup scheduling, operational dashboards, and web experiences that help households and organisations recycle electronics through formal channels.",
+    className: "md:col-span-2",
+    thumbnail: "/exp1.svg",
+    current: true,
+    tags: ["Dashboards", "Pickup flows", "EPR tooling"],
   },
   {
     id: 2,
-    companyName : " NetPuppys Pvt. Ltd",
-    date : "Oct-2023 - April-2024",
+    companyName: "Ads Enviro",
+    date: "May 2024 — Dec 2025",
     title: "Software Developer",
-    desc: " Led the development of two distinct projects: Mpire, a dynamic website utilizing a database, and TIS, a school website.For Mpire, I oversaw project management responsibilities.In TIS, I implemented CSS and Material UI for styling, and incorporated Framer Motion to enhance the site with animations.",
-    className: "md:col-span-2", // change to md:col-span-2
+    desc: "Developed frontend applications supporting waste management and EPR operations. Focused on client-facing web experiences, internal tools, and dashboards that streamlined recycling workflows and environmental compliance reporting.",
+    className: "md:col-span-2",
     thumbnail: "/exp3.svg",
+    current: false,
+    tags: ["Web apps", "Operations", "Compliance"],
   },
   {
     id: 3,
-    companyName : " Eikomp Pvt. Ltd.",
-    date : "Feb-2023 - Oct-2023",
-    title: "Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies. Upon completing my internship at eikomp, I secured a full-time position.The product I developed is being utilized by the company's clientele.During this period, I developed proficiency in API usage and became acquainted with various tools such as Postman, npm,and yarn, while utilizing multiple libraries",
+    companyName: "AiCansell Pvt. Ltd.",
+    date: "April 2023 — May 2024",
+    title: "Software Developer",
+    desc: "Developed a product featuring User and Admin panels, and also managed projects at Learning Lens. This platform focused on training workers and employees, offering CRM, Users, and Kiosk web applications. Working alongside a team of two, we ensured the smooth functioning of an internationally used product, including resolving backend data issues to optimize performance.",
+    className: "md:col-span-2",
+    thumbnail: "/exp2.svg",
+    current: false,
+    tags: ["CRM", "Admin panel", "Kiosk apps"],
+  },
+  {
+    id: 4,
+    companyName: "Eikomp Pvt. Ltd.",
+    date: "Feb 2022 — March 2023",
+    title: "Intern → Frontend Developer",
+    desc: "Joined as a frontend intern for two months, then converted to a full-time Frontend Developer. Built and maintained user-facing features with modern frontend tools. The product shipped during this period is used by the company's clients. Gained hands-on experience with APIs, Postman, npm, yarn, and multiple UI libraries.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
+    current: false,
+    tags: ["Internship", "Full-time", "Frontend"],
   },
 ];
 

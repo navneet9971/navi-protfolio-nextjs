@@ -1,61 +1,52 @@
-"use client"
+"use client";
 
+import MagneticButton from "@/components/ui/MagneticButton";
+import { email, socialMedia } from "@/data";
 import { FaLocationArrow } from "react-icons/fa6";
 
-import { socialMedia } from "@/data";
-import MagicButton from "./ui/MagicButton";
-
 const Footer = () => {
-
-  const handleClick = (url: string) => {
-    window.open(url, "_blank");
-  };
-
   return (
-    <footer className="w-full pt-20 pb-20 " id="contact">
-      {/* background grid */}
-      <div className="w-full absolute left-0 -bottom-72 min-h-96">
-        <img
-          src="/footer-grid.svg"
-          alt="grid"
-          className="w-full h-full opacity-50 "
-        />
-      </div>
-
-      <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital
-          presence to the next level?
-        </h1>
-        <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let&apos;s discuss how I can help you
-          achieve your goals.
-        </p>
-        <a href="mailto:contact@jsmastery.pro">
-          <MagicButton
-            title="Let's get in touch"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
-        </a>
-      </div>
-      <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
-        <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2024 Navneet Kumar
+    <footer id="contact" className="scroll-mt-24 border-t border-cream/10 pt-24 pb-10">
+      <div className="section-shell">
+        <p className="kicker">05 — Contact</p>
+        <h2 className="mt-6 max-w-4xl font-display text-5xl font-bold leading-[0.95] tracking-tight text-cream md:text-8xl">
+          Let’s make
+          <br />
+          something <span className="text-lime">sharp.</span>
+        </h2>
+        <p className="mt-6 max-w-lg text-mute">
+          Have a product in mind? I design and ship frontend that feels fast, clear, and a little bit alive.
         </p>
 
-        <div className="flex items-center md:gap-3 gap-6">
-          {socialMedia.map((info) => (
-            <div
-              key={info.id}
-              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
-            >
-              <img 
-               onClick={() => handleClick(info.url)}
-               style={{ cursor: 'pointer' }}
-              src={info.img} alt="icons" width={20} height={20} />
-            </div>
-          ))}
+        <div className="mt-10 flex flex-wrap items-center gap-4">
+          <MagneticButton href={`mailto:${email}`}>
+            Email me
+            <FaLocationArrow className="text-xs" />
+          </MagneticButton>
+          <p className="text-sm text-mute">{email}</p>
+        </div>
+
+        <div className="mt-20 flex flex-col items-start justify-between gap-6 border-t border-cream/10 pt-8 md:flex-row md:items-center">
+          <p className="text-sm text-mute">
+            © {new Date().getFullYear()} Navneet Kumar
+          </p>
+          <div className="flex items-center gap-6">
+            {socialMedia.map((item) => (
+              <a
+                key={item.id}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-mute transition hover:text-lime"
+              >
+                {item.url.includes("github")
+                  ? "GitHub"
+                  : item.url.includes("linkedin")
+                    ? "LinkedIn"
+                    : "X"}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </footer>

@@ -1,44 +1,34 @@
-"use client"
+"use client";
 
-import { FaLocationArrow } from 'react-icons/fa'
-import MagicButton from './ui/MagicButton'
-import { Spotlight } from './ui/Spotlight'
-import { TextGenerateEffect } from './ui/TextGenerateEffect'
-import { FaDownload } from 'react-icons/fa6'
-import { LinkPreview } from './ui/LinkPerview'
-import { image } from '@/data'
-import { toast, ToastContainer } from 'react-toastify'
-import xlogo from "../public/xlogo.png";
-import github from "../public/gitmove.png";
-import linkdin from "../public/inkdin.png";
-import FloatingIcons from './ui/FlotingIcons'
+import MagneticButton from "@/components/ui/MagneticButton";
+import { motion } from "framer-motion";
+import { toast } from "react-toastify";
+import { FaDownload } from "react-icons/fa6";
 
 const Hero = () => {
-
   const handleResume = () => {
     try {
-      // Show loader toast
       const loaderToast = toast.loading("Downloading...");
-
-      const link = document.createElement('a');
-      link.href = "https://drive.google.com/uc?export=download&id=14TjMwXeawmbIJl0fumhbVYy5jN1KBIjt";
-      link.setAttribute('download', 'Navneet Resume.pdf');
+      const link = document.createElement("a");
+      link.href =
+        "https://drive.google.com/uc?export=download&id=14TjMwXeawmbIJl0fumhbVYy5jN1KBIjt";
+      link.setAttribute("download", "Navneet Resume.pdf");
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
 
-      // Mark the loader toast as done after a small delay
       setTimeout(() => {
         toast.update(loaderToast, {
           render: "Download done",
           type: "success",
           isLoading: false,
-          autoClose: 5000
+          autoClose: 5000,
         });
-
-        // After a 1-second delay, view the resume
         setTimeout(() => {
-          window.open("https://drive.google.com/file/d/14TjMwXeawmbIJl0fumhbVYy5jN1KBIjt/view?usp=sharing", "_blank");
+          window.open(
+            "https://drive.google.com/file/d/14TjMwXeawmbIJl0fumhbVYy5jN1KBIjt/view?usp=sharing",
+            "_blank"
+          );
         }, 1000);
       }, 1000);
     } catch (err) {
@@ -47,94 +37,96 @@ const Hero = () => {
     }
   };
 
-
   return (
-    <div className='pb-20 pt-36'>
+    <section
+      id="top"
+      className="relative flex min-h-screen flex-col justify-end overflow-hidden pb-8 pt-28"
+      onMouseMove={(event) => {
+        const target = event.currentTarget;
+        const rect = target.getBoundingClientRect();
+        target.style.setProperty("--mx", `${event.clientX - rect.left}px`);
+        target.style.setProperty("--my", `${event.clientY - rect.top}px`);
+      }}
+    >
+      <div
+        className="pointer-events-none absolute inset-0 opacity-80"
+        style={{
+          background:
+            "radial-gradient(520px circle at var(--mx, 70%) var(--my, 20%), rgba(214,255,75,0.12), transparent 45%)",
+        }}
+      />
 
-      <div>
-        <Spotlight className='-top-40 -left-10 md:-left-32
-       md:-top-20 h-screen' fill='white' />
-        <Spotlight className='top-10 left-full h-[80vh]
-       w-[50vw]' fill='purple' />
-        <Spotlight className='top-28 left-80 h-[80vh]
-       w-[50vw]' fill='blue' />
-      </div>
-
-      <div className="h-screen w-full dark:bg-black-100 bg-white  
-        dark:bg-grid-white/[0.03] bg-grid-black/[0.2] 
-        flex items-center justify-center 
-        absolute top-0 left-0">
-
-        <div className="absolute pointer-events-none 
-      inset-0 flex items-center justify-center 
-      dark:bg-black-100 bg-white 
-      [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
-      </div>
-
-
-      <div className='flex justify-center relative my-20
-    z-10'>
-        <div className='max-w-[89vw] md:max-w-2xl
-        lg:max-w-[60vw] flex flex-col items-center 
-        justify-center'>
-          {/* <h2 className='uppercase tracking-widest
-            text-xs text-center text-blue-100 max-w-80'>
-                Dynamic Web Magic with Next.js
-            </h2> */}
-          <TextGenerateEffect
-            className='text-center text-[40px] md:text-5xl
-            lg:text-6xl'
-            words='Transforming Concepts into Seamless User Experiences'
-          />
-
-
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hello, I&apos;m
-            <LinkPreview url='https://x.com/Navi9971'>
-              <span className='ml-2 text-purple font-bold sm:ml-1'> Navneet Kumar,</span>
-            </LinkPreview>
-            a Frontend Developer based in
-
-            <LinkPreview url={image.delhi}>
-              <span className='ml-2 text-purple font-bold sm:ml-1'>Delhi</span>
-            </LinkPreview>
-          </p>
-          {/* <FloatingIcons>
-      <img id="x" src={xlogo.src} width={40} height={40} className="cursor-pointer" alt="Developer logo" />
-      <img id="git" src={github.src} width={26} height={26} className="cursor-pointer" alt="Developer logo" />
-      <img id="linkdin" src={linkdin.src} width={27} height={27} className="cursor-pointer" alt="Developer logo" />
-    </FloatingIcons> */}
-          <span className="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300 mb-5 lg:mb-0">
-            <div className="inline-block w-3 h-3 mr-2 bg-green-500 rounded-full relative">
-
-              <span className=" block w-3 h-3 me-1 bg-green-500 opacity-70 rounded-full animate-blink"></span>
-            </div>
-            Available for Work
+      <div className="section-shell relative z-10">
+        <div className="mb-8 flex items-center justify-between gap-4">
+          <span className="inline-flex items-center gap-2 rounded-full border border-cream/10 bg-panel px-3 py-1 text-xs text-cream">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-lime opacity-70" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-lime" />
+            </span>
+            Available for work
           </span>
-
-          <div className='flex items-center justify-center gap-10'>
-            <a href='#project'>
-              <MagicButton
-                title="Show my work"
-                icon={<FaLocationArrow />}
-                position='right'
-              />
-            </a>
-            <a>
-              <MagicButton
-                handleClick={handleResume}
-                title="Resume"
-                icon={<FaDownload />}
-                position='right'
-              />
-            </a>
-          </div>
+          <p className="hidden text-sm text-mute md:block">Delhi, India · IST</p>
         </div>
 
+        <motion.h1
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="font-display text-[16vw] font-extrabold leading-[0.85] tracking-tight text-cream sm:text-[12vw] lg:text-[9.5rem]"
+        >
+          Navneet
+          <br />
+          Kumar<span className="text-lime">.</span>
+        </motion.h1>
 
+        <div className="mt-10 flex flex-col gap-8 border-t border-cream/10 pt-8 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-xl">
+            <p className="kicker">Frontend developer</p>
+            <p className="mt-4 text-lg leading-relaxed text-mute md:text-xl">
+              I turn product ideas into fast, tactile interfaces — React, Next.js,
+              and motion that feels alive.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-3">
+            <MagneticButton href="#projects">View work</MagneticButton>
+            <MagneticButton variant="ghost" onClick={handleResume}>
+              Resume
+              <FaDownload className="text-xs" />
+            </MagneticButton>
+          </div>
+        </div>
       </div>
-    </div>
-  )
-}
 
-export default Hero
+      <div className="relative z-10 mt-16 overflow-hidden border-y border-cream/10">
+        <div className="flex w-max animate-marquee gap-10 py-4 hover:[animation-play-state:paused]">
+          {[...Array(2)].map((_, copy) => (
+            <div key={copy} className="flex gap-10">
+              {[
+                "React Native",
+                "Next.js",
+                "Node",
+                "MongoDB",
+                "Cursor",
+                "Gemini",
+                "ChatGPT",
+                "Claude",
+                "Apify",
+                "Hugging Face",
+              ].map((item) => (
+                <span
+                  key={`${copy}-${item}`}
+                  className="font-display text-sm uppercase tracking-[0.35em] text-mute"
+                >
+                  {item} <span className="text-lime">/</span>
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
